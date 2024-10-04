@@ -1,0 +1,4 @@
+---
+# vars file for setup-roles
+httpd_package_name: "httpd"
+apache2_package_name: "apache2"

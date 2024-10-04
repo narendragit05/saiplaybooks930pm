@@ -1,0 +1,6 @@
+---
+- name: my sample playbook
+  hosts: all
+  become: true
+  roles:
+  - setup-roles
