@@ -1,0 +1,12 @@
+---
+- name: this playbook is to copy a file to all the nodes.
+  hosts: all
+  become: true
+  tasks:
+  - name: to compy a file
+    copy:
+      src: /home/ansadmin/index.html
+      dest: /home/ansadmin
+      mode: 0600
+      owner: skoda
+

@@ -1,0 +1,15 @@
+---
+- name: my sample play book
+  hosts: all
+  become: true
+  tasks:
+    - name: to stop the service httpd
+      service:
+       name: httpd
+       state: stopped
+
+    - name: to unisnatll the httpd
+      yum:
+       name: httpd
+       state: absent
+         

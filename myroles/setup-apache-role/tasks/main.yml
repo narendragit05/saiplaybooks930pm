@@ -1,0 +1,16 @@
+---
+# tasks file for setup-apache-role
+- name: install httpd package
+  yum:
+    name: "{{httpd_package_name}}"
+    state: installed
+  when: ansible_os_family == "RedHat"
+  notify: start httpd service
+
+- name: install apache2 package
+  apt:
+    name: "{{apache2_package_name}}"
+    state: present
+  when: ansible_os_family == "Debian"
+  notify: start apache2 service
+

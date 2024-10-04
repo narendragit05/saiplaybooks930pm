@@ -1,0 +1,10 @@
+---
+- name: to install git package
+  hosts: all
+  become: true
+  tasks:
+    - name: git package install
+      yum:
+        name: git
+        state: installed
+
